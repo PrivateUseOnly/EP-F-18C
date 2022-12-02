@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="std_button_margin">10dp</dimen>
+	<dimen name="buttons_size">50dp</dimen>
+	<dimen name="std_padding">5dp</dimen>
+</resources>

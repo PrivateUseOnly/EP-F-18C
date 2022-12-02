@@ -1,0 +1,17 @@
+<resources>
+	<string name="app_name">EP-F18C</string>
+	<string name="title">EMERGENCY CHECKLISTS</string>
+	<string name="aircraft_f18">A1-F18AC-NFM-500</string>
+	<string name="fire">1. CKPT FIRE TEMP OBOGS</string>
+	<string name="hydraulic">2. HYDRAULIC</string>
+	<string name="ooc">3. OUT-OF-CONTROL</string>
+	<string name="abort">4. ABORT EGRESS TO/LAND</string>
+	<string name="gear">5. GEAR TIRE BRAKE</string>
+	<string name="electrical">6. ELECTRICAL</string>
+	<string name="engine">7. ENGINE FUEL</string>
+	<string name="warnings">8. WARNINGS</string>
+	<string name="next">Next Page</string>
+	<string name="back">Back</string>
+	<string name="finish">Close</string>
+	<string name="checklist">Checklist</string>
+</resources>
