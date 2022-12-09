@@ -4,7 +4,7 @@ class ChecklistsDataProvider {
 
     private var pickedChecklist = 0
     var pickedPage = 0
-    private var checklistLength = 0
+    var checklistLength = 0
     private var checklistPage = 0
 
     private fun getChecklistsSize(checklistIndex: Int, pageIndex: Int): Int {
@@ -50,6 +50,15 @@ class ChecklistsDataProvider {
         if (checklistLength > (pickedPage + 1)) {
             pickedPage++
         } else pickedPage = 0
+        return getChecklists(pickedChecklist, pickedPage)
+    }
+
+    fun getPreviousPage(): Int {
+        if (pickedPage >= 1) {
+            pickedPage--
+        } else {
+            pickedPage = checklistLength-1
+        }
         return getChecklists(pickedChecklist, pickedPage)
     }
 }

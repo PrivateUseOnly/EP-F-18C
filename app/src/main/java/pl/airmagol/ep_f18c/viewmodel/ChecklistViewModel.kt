@@ -34,4 +34,10 @@ class ChecklistViewModel : ViewModel() {
         return result
     }
 
+    fun previousPage(): Int {
+        val result = allChecklists.getPreviousPage()
+        currentIndex = allChecklists.pickedPage
+        return result
+    }
+
 }

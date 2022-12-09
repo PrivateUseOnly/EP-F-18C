@@ -185,11 +185,11 @@
 		android:visibility="gone"/>
 
 	<ImageButton
-		android:id="@+id/btnBackHome"
+		android:id="@+id/btn_back"
 		android:layout_width="60dp"
 		android:layout_height="60dp"
 		android:backgroundTint="@color/nav_buttons"
-		android:visibility="invisible"
+		android:visibility="gone"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
@@ -201,12 +201,24 @@
 		android:layout_width="60dp"
 		android:layout_height="60dp"
 		android:backgroundTint="@color/nav_buttons"
-		android:visibility="invisible"
+		android:visibility="gone"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:srcCompat="@drawable/ic_baseline_chevron_right_24"
 		android:contentDescription="@string/next"/>
+
+	<ImageButton
+		android:id="@+id/btn_home"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:backgroundTint="@color/nav_buttons"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:srcCompat = "@drawable/ic_baseline_home_24"
+		android:contentDescription="@string/home"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

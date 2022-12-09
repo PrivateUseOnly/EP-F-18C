@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity() {
         binding.btn6Electrical.setOnClickListener { showSelectedChecklist(6) }
         binding.btn7Engine.setOnClickListener { showSelectedChecklist(7) }
         binding.btn8Warn.setOnClickListener { showSelectedChecklist(8) }
-        binding.btnBackHome.setOnClickListener { setChecklistGone() }
+        binding.btnBack.setOnClickListener { btnBackOnClick() }
         binding.btnNext.setOnClickListener { btnNextOnClick() }
+        binding.btnHome.setOnClickListener { setChecklistGone() }
 
         binding.ivChecklist.setImageResource(
             viewModel.showChecklistPage(
@@ -57,17 +58,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun setChecklistVisible() {
         binding.llMenu.visibility = View.GONE
-        binding.btnBackHome.visibility = View.VISIBLE
+        binding.btnBack.visibility = View.VISIBLE
         binding.ivChecklist.visibility = View.VISIBLE
         binding.btnNext.visibility = View.VISIBLE
+        binding.btnHome.visibility = View.VISIBLE
 
     }
 
     private fun setChecklistGone() {
         binding.llMenu.visibility = View.VISIBLE
-        binding.btnBackHome.visibility = View.GONE
+        binding.btnBack.visibility = View.GONE
         binding.ivChecklist.visibility = View.GONE
         binding.btnNext.visibility = View.GONE
+        binding.btnHome.visibility = View.GONE
         viewModel.clear()
     }
 
@@ -75,6 +78,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivChecklist.setImageResource(
             viewModel.nextPage()
+        )
+    }
+
+    private fun btnBackOnClick(){
+        binding.ivChecklist.setImageResource(
+            viewModel.previousPage()
         )
     }
 }
