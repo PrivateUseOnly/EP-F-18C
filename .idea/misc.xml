@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1305" />
+        <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.196" />
+        <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.196" />
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1305" />
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable/ic_sharp_local_fire_department_24.xml" value="0.1" />
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/drawable/ic_twotone_fact_check_24.xml" value="0.1" />
-        <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/layout-v28/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/layout-v28/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/airma/Desktop/Java/Android/EPF18C/app/src/main/res/mipmap-anydpi-v26/ic_f18.xml" value="0.2545" />
       </map>

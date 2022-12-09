@@ -13,5 +13,6 @@
 	<color name="fire">#A1FFFF00</color>
 	<color name="engine">#99FF0000</color>
 	<color name="hydraulic">#FF00AAFF</color>
+	<color name="nav_buttons">#88222222</color>
 
 </resources>

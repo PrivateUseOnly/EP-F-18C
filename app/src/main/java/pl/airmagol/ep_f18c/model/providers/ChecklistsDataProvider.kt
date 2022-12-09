@@ -3,23 +3,23 @@ package pl.airmagol.ep_f18c.model.providers
 class ChecklistsDataProvider {
 
     private var pickedChecklist = 0
-    private var pickedPage = 0
+    var pickedPage = 0
     private var checklistLength = 0
     private var checklistPage = 0
 
-    private fun getChecklistsSize(checklistIndex: Int, page: Int): Int {
+    private fun getChecklistsSize(checklistIndex: Int, pageIndex: Int): Int {
         pickedChecklist = checklistIndex
-        pickedPage = page
+        pickedPage = pageIndex
 
         checklistLength = when (pickedChecklist) {
-            0 -> Checklists.firePages.size
-            1 -> Checklists.hydraulicPages.size
-            2 -> Checklists.oocPages.size
-            3 -> Checklists.abortPages.size
-            4 -> Checklists.gearPages.size
-            5 -> Checklists.electricPages.size
-            6 -> Checklists.enginePages.size
-            7 -> Checklists.warningPages.size
+            1 -> Checklists.firePages.size
+            2 -> Checklists.hydraulicPages.size
+            3 -> Checklists.oocPages.size
+            4 -> Checklists.abortPages.size
+            5 -> Checklists.gearPages.size
+            6 -> Checklists.electricPages.size
+            7 -> Checklists.enginePages.size
+            8 -> Checklists.warningPages.size
             else -> 0
         }
         return checklistLength
@@ -28,15 +28,15 @@ class ChecklistsDataProvider {
 
     private fun getPage(checklistIndex: Int) {
         checklistPage = when (checklistIndex) {
-            0 -> Checklists.firePages[pickedPage]
-            1 -> Checklists.hydraulicPages[pickedPage]
-            2 -> Checklists.oocPages[pickedPage]
-            3 -> Checklists.abortPages[pickedPage]
-            4 -> Checklists.gearPages[pickedPage]
-            5 -> Checklists.electricPages[pickedPage]
-            6 -> Checklists.enginePages[pickedPage]
-            7 -> Checklists.warningPages[pickedPage]
-            else -> 0
+            1 -> Checklists.firePages[pickedPage]
+            2 -> Checklists.hydraulicPages[pickedPage]
+            3 -> Checklists.oocPages[pickedPage]
+            4 -> Checklists.abortPages[pickedPage]
+            5 -> Checklists.gearPages[pickedPage]
+            6 -> Checklists.electricPages[pickedPage]
+            7 -> Checklists.enginePages[pickedPage]
+            8 -> Checklists.warningPages[pickedPage]
+            else -> Checklists.firePages[pickedPage]
         }
     }
 

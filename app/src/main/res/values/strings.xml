@@ -14,4 +14,6 @@
 	<string name="back">Back</string>
 	<string name="finish">Close</string>
 	<string name="checklist">Checklist</string>
+	<string name="btnBack">Back to list</string>
+	<string name="btnNext">Next Page</string>
 </resources>

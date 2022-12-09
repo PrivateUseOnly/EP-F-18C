@@ -12,10 +12,10 @@
 		android:layout_height="match_parent"
 		android:gravity="center_horizontal"
 		android:orientation="vertical"
+		android:visibility="visible"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		android:visibility="visible">
+		app:layout_constraintStart_toStartOf="parent">
 
 		<TextView
 			android:id="@+id/tv_title"
@@ -103,6 +103,7 @@
 				android:text="@string/electrical"
 				android:textColor="@color/black"
 				android:textStyle="bold" />
+
 		</LinearLayout>
 
 		<LinearLayout
@@ -168,47 +169,44 @@
 				android:textColor="@color/engine"
 				android:textStyle="bold" />
 		</LinearLayout>
+
 	</LinearLayout>
 
-	<androidx.constraintlayout.widget.ConstraintLayout
-		android:id="@+id/ll_checklist"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:gravity="center_horizontal"
-		android:orientation="horizontal"
+	<pl.airmagol.ep_f18c.view.CustomZoom
+		android:id="@+id/iv_checklist"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/checklist"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		android:visibility="gone"/>
+
+	<ImageButton
+		android:id="@+id/btnBackHome"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:backgroundTint="@color/nav_buttons"
+		android:visibility="invisible"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/ic_baseline_chevron_left_24"
+		android:contentDescription="@string/btnBack" />
+
+	<ImageButton
+		android:id="@+id/btnNext"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:backgroundTint="@color/nav_buttons"
+		android:visibility="invisible"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		android:visibility="gone">
-
-		<Button
-			android:id="@+id/btn_back"
-			android:layout_width="wrap_content"
-			android:layout_height="60dp"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintStart_toStartOf="parent"
-			android:text="@string/back"
-			android:textColor="@color/white"
-			android:backgroundTint="@color/black" />
-
-		<ImageView
-			android:id="@+id/iv_checklist"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:contentDescription="@string/checklist"
-			/>
-
-		<Button
-			android:id="@+id/btn_nextPage"
-			android:layout_width="wrap_content"
-			android:layout_height="60dp"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			android:text="@string/next"
-			android:textColor="@color/white"
-			android:backgroundTint="@color/black"/>
-
-	</androidx.constraintlayout.widget.ConstraintLayout>
-
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/ic_baseline_chevron_right_24"
+		android:contentDescription="@string/next"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

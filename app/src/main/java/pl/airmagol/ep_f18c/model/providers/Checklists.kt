@@ -6,14 +6,16 @@ object Checklists {
 
     val firePages = arrayOf(
         R.drawable.fire_01,
-        R.drawable.fire_02)
+        R.drawable.fire_02
+    )
 
     val hydraulicPages = arrayOf(
         R.drawable.hydraulic_01,
         R.drawable.hydraulic_02,
         R.drawable.hydraulic_03,
         R.drawable.hydraulic_04,
-        R.drawable.hydraulic_05)
+        R.drawable.hydraulic_05
+    )
 
     val oocPages = arrayOf(
         R.drawable.ooc_01,
@@ -21,7 +23,8 @@ object Checklists {
         R.drawable.ooc_03,
         R.drawable.ooc_04,
         R.drawable.ooc_05,
-        R.drawable.ooc_06)
+        R.drawable.ooc_06
+    )
 
     val abortPages = arrayOf(
         R.drawable.abort_01,
@@ -29,7 +32,8 @@ object Checklists {
         R.drawable.abort_03,
         R.drawable.abort_04,
         R.drawable.abort_05,
-        R.drawable.abort_06)
+        R.drawable.abort_06
+    )
 
     val gearPages = arrayOf(
         R.drawable.gear_01,
@@ -43,7 +47,8 @@ object Checklists {
         R.drawable.gear_09,
         R.drawable.gear_10,
         R.drawable.gear_11,
-        R.drawable.gear_12)
+        R.drawable.gear_12
+    )
 
     val electricPages = arrayOf(
         R.drawable.electric_01,
@@ -55,22 +60,25 @@ object Checklists {
         R.drawable.electric_07,
         R.drawable.electric_08,
         R.drawable.electric_09,
-        R.drawable.electric_10)
+        R.drawable.electric_10
+    )
 
     val enginePages = arrayOf(
-        R.drawable.engine_01
-        ,R.drawable.engine_02
-        ,R.drawable.engine_03
-        ,R.drawable.engine_04
-        ,R.drawable.engine_05
-        ,R.drawable.engine_06
-        ,R.drawable.engine_07
-        ,R.drawable.engine_08
-        ,R.drawable.engine_09
-        ,R.drawable.engine_10
-        ,R.drawable.engine_11)
+        R.drawable.engine_01,
+        R.drawable.engine_02,
+        R.drawable.engine_03,
+        R.drawable.engine_04,
+        R.drawable.engine_05,
+        R.drawable.engine_06,
+        R.drawable.engine_07,
+        R.drawable.engine_08,
+        R.drawable.engine_09,
+        R.drawable.engine_10,
+        R.drawable.engine_11
+    )
 
     val warningPages = arrayOf(
+        R.drawable.index_03,
         R.drawable.warn_01,
         R.drawable.warn_02,
         R.drawable.warn_03,
@@ -109,5 +117,6 @@ object Checklists {
         R.drawable.warn_36,
         R.drawable.warn_37,
         R.drawable.warn_38,
-        R.drawable.warn_39)
+        R.drawable.warn_39
+    )
 }

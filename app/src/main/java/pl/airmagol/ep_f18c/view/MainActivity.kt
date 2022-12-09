@@ -3,14 +3,14 @@ package pl.airmagol.ep_f18c.view
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import pl.airmagol.ep_f18c.databinding.ActivityMainBinding
 import pl.airmagol.ep_f18c.viewmodel.ChecklistViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val checklistViewModel = ChecklistViewModel()
-    private var imageVisibility = false
+    private lateinit var viewModel: ChecklistViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,45 +18,63 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        viewModel = ViewModelProvider(this)[ChecklistViewModel::class.java]
+        binding.btn1Fire.setOnClickListener { showSelectedChecklist(1) }
+        binding.btn2Hydraulic.setOnClickListener { showSelectedChecklist(2) }
+        binding.btn3Ooc.setOnClickListener { showSelectedChecklist(3) }
+        binding.btn4Abort.setOnClickListener { showSelectedChecklist(4) }
+        binding.btn5Gear.setOnClickListener { showSelectedChecklist(5) }
+        binding.btn6Electrical.setOnClickListener { showSelectedChecklist(6) }
+        binding.btn7Engine.setOnClickListener { showSelectedChecklist(7) }
+        binding.btn8Warn.setOnClickListener { showSelectedChecklist(8) }
+        binding.btnBackHome.setOnClickListener { setChecklistGone() }
+        binding.btnNext.setOnClickListener { btnNextOnClick() }
 
-        binding.btn1Fire.setOnClickListener { showSelectedChecklist(0, 0) }
-        binding.btn2Hydraulic.setOnClickListener { showSelectedChecklist(1, 0) }
-        binding.btn3Ooc.setOnClickListener { showSelectedChecklist(2, 0) }
-        binding.btn4Abort.setOnClickListener { showSelectedChecklist(3, 0) }
-        binding.btn5Gear.setOnClickListener { showSelectedChecklist(4, 0) }
-        binding.btn6Electrical.setOnClickListener { showSelectedChecklist(5, 0) }
-        binding.btn7Engine.setOnClickListener { showSelectedChecklist(6, 0) }
-        binding.btn8Warn.setOnClickListener { showSelectedChecklist(7, 0) }
-        binding.btnBack?.setOnClickListener { setChecklistGone() }
-        binding.btnNextPage?.setOnClickListener { btnNextOnClick() }
+        binding.ivChecklist.setImageResource(
+            viewModel.showChecklistPage(
+                viewModel.currentChecklistIndex,
+                viewModel.currentIndex
+            )
+        )
+        if (viewModel.pickedList != 0) {
+            setChecklistVisible()
+        }
+
+
     }
 
-    private fun showSelectedChecklist(checklistIndex: Int, pageIndex: Int) {
-        binding.ivChecklist?.setImageResource(
-            checklistViewModel.showChecklistPage(
+
+    private fun showSelectedChecklist(checklistIndex: Int) {
+        val startingPage = 0
+        binding.ivChecklist.setImageResource(
+            viewModel.showChecklistPage(
                 checklistIndex,
-                pageIndex
+                startingPage
             )
         )
         setChecklistVisible()
     }
 
     private fun setChecklistVisible() {
-        binding.llMenu?.visibility = View.GONE
-        binding.llChecklist?.visibility = View.VISIBLE
+        binding.llMenu.visibility = View.GONE
+        binding.btnBackHome.visibility = View.VISIBLE
+        binding.ivChecklist.visibility = View.VISIBLE
+        binding.btnNext.visibility = View.VISIBLE
 
     }
 
     private fun setChecklistGone() {
-        binding.llMenu?.visibility = View.VISIBLE
-        binding.llChecklist?.visibility = View.GONE
-        checklistViewModel.clear()
+        binding.llMenu.visibility = View.VISIBLE
+        binding.btnBackHome.visibility = View.GONE
+        binding.ivChecklist.visibility = View.GONE
+        binding.btnNext.visibility = View.GONE
+        viewModel.clear()
     }
 
     private fun btnNextOnClick() {
 
-        binding.ivChecklist?.setImageResource(
-            checklistViewModel.nextPage()
+        binding.ivChecklist.setImageResource(
+            viewModel.nextPage()
         )
     }
 }
