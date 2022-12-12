@@ -6,12 +6,10 @@ import android.graphics.PointF
 import android.util.AttributeSet
 import android.view.*
 import androidx.appcompat.widget.AppCompatImageView
-import pl.airmagol.ep_f18c.databinding.ActivityMainBinding
 
 
 class CustomZoom: AppCompatImageView, View.OnTouchListener,
     GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener{
-    private lateinit var binding: ActivityMainBinding
     //Construction details
     private var myContext: Context? = null
     private var myScaleDetector: ScaleGestureDetector? = null
